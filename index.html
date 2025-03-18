@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZLW176N7PD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-ZLW176N7PD');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/scrollreveal"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.15.1/devicon.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #111;
+            color: #fff;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        .project-item {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .project-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .icon {
+            font-size: 4rem;
+            margin: 10px;
+        }
+
+        .about-image-container {
+            overflow: hidden;
+
+        }
+
+        .about-image {
+            width: 100%;
+            height: 100%;
+
+            transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+            transform: scale(1);
+            filter: grayscale(100%);
+        }
+
+        .about-image:hover {
+            filter: none;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="bgCanvas"></canvas>
+
+    <section class="min-h-screen flex flex-col justify-center items-center text-center px-4">
+        <h1 class="text-4xl md:text-6xl font-bold">Sivakumar's Portfolio</h1>
+        <p class="text-lg md:text-xl mt-4">Creative Web Developer & Designer</p>
+        <a href="#projects"
+            class="mt-8 bg-green-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300">View
+            Projects</a>
+    </section>
+
+    <section id="about" class="container mx-auto py-20 px-4">
+        <h2 class="text-center text-4xl md:text-5xl font-semibold mb-12 text-gradient" data-aos="fade-up">About Me</h2>
+        <div class="flex flex-col md:flex-row items-center gap-10">
+            <div class="md:w-1/2">
+                <p class="text-lg mb-8 leading-relaxed">
+                    Hello! I'm Sivakumar, a dedicated web developer with a passion for transforming creative ideas into
+                    functional and engaging web experiences. Recently graduated, I'm now fully committed to building a
+                    successful career in web development. My journey has been a continuous adventure of learning,
+                    growth, and overcoming exciting challenges. I thrive on creating user-centric and visually appealing
+                    websites.
+                </p>
+                <p class="text-lg font-semibold mb-4">
+                    Moments that shaped my path:
+                </p>
+            </div>
+            <div class="md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div
+                    class="about-image overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <img src="media/pexels-emma-bauso-1183828-2253879.jpg" alt="Memory 1"
+                        class="about-image-container w-full h-48 object-cover transition-transform duration-300 transform scale-100 hover:scale-105">
+                </div>
+                <div
+                    class="about-image-container overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 about-image-container">
+                    <img src="media/pexels-matheusferrero-1974927.jpg" alt="Memory 2"
+                        class="about-image w-full h-48 object-cover transition-transform duration-300 transform scale-100 hover:scale-105">
+                </div>
+                <div
+                    class="about-image-container overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 sm:col-span-2">
+                    <img src="media/pexels-liliana-drew-8506422.jpg" alt="Memory 3"
+                        class="about-image w-full h-64 object-cover transition-transform duration-300 transform scale-100 hover:scale-105">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Roadmap Section -->
+    <section id="roadmap" class="container mx-auto py-20 px-4">
+        <h2 class="text-center text-4xl md:text-5xl font-semibold mb-12 text-gradient" data-aos="fade-up">Roadmap</h2>
+
+        <div class="relative">
+            <!-- Road line -->
+            <div class="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gray-700 h-full z-0"></div>
+
+            <!-- Phase 1 -->
+            <div class="mb-16 flex justify-center relative">
+                <div
+                    class="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-3xl shadow-2xl hover:shadow-xl transition-shadow duration-300 w-2/3 md:w-1/2 text-center relative z-10">
+                    <div
+                        class="absolute -left-6 md:-left-8 top-1/2 transform -translate-y-1/2 bg-blue-600 rounded-full w-12 h-12 flex items-center justify-center">
+                        <i class="fas fa-lightbulb text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-300">Ignition Phase</h3>
+                    <p class="text-gray-400 leading-relaxed">Learn Basic about Web Development</p>
+                </div>
+            </div>
+
+            <!-- Phase 2 -->
+            <div class="mb-16 flex justify-center relative">
+                <div
+                    class="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-3xl shadow-2xl hover:shadow-xl transition-shadow duration-300 w-2/3 md:w-1/2 text-center relative z-10">
+                    <div
+                        class="absolute -right-6 md:-right-8 top-1/2 transform -translate-y-1/2 bg-green-600 rounded-full w-12 h-12 flex items-center justify-center">
+                        <i class="fas fa-rocket text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-green-300">Launch Phase</h3>
+                    <p class="text-gray-400 leading-relaxed">Dive deep into core concepts: HTML5, CSS3, JavaScript, and
+                        React fundamentals.</p>
+                </div>
+            </div>
+
+            <!-- Phase 3 -->
+            <div class="flex justify-center relative">
+                <div
+                    class="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-3xl shadow-2xl hover:shadow-xl transition-shadow duration-300 w-2/3 md:w-1/2 text-center relative z-10">
+                    <div
+                        class="absolute -left-6 md:-left-8 top-1/2 transform -translate-y-1/2 bg-purple-600 rounded-full w-12 h-12 flex items-center justify-center">
+                        <i class="fas fa-meteor text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-purple-300">Ascension Phase</h3>
+                    <p class="text-gray-400 leading-relaxed">Developing a responsive and dynamic web application that
+                        ensures seamless functionality across devices, providing an interactive and user-friendly
+                        experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+
+
+
+
+
+    <section id="skills" class="container mx-auto py-20 px-4 bg-gr-800 rounded-lg">
+        <h2 class="text-center text-4xl md:text-5xl font-semibold mb-12">Skills</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 text-center">
+            <img src="media/html-5.png" alt="HTML" class="mx-auto w-16 h-16">
+            <img src="media/css-3.png" alt="CSS" class="mx-auto w-16 h-16">
+            <img src="media/java-script.png" alt="JavaScript" class="mx-auto w-16 h-16">
+            <img src="media/python.png" alt="Python" class="mx-auto w-16 h-16">
+            <img src="media/icons8-bootstrap-96.png" alt="Bootstrap" class="mx-auto w-16 h-16">
+            <img src="media/download.png" alt="React" class="mx-auto w-16 h-16">
+            <img src="media/atom.png" alt="Atom" class="mx-auto w-16 h-16">
+            <img src="media/icons8-api-32.png" alt="API" class="mx-auto w-16 h-16">
+            <img src="media/icons8-django-48.png" alt="Django" class="mx-auto w-16 h-16">
+            <img src="media/mysql.png" alt="MySQL" class="mx-auto w-16 h-16">
+            <img src="media/icons8-mongo-db-48.png" alt="MongoDB" class="mx-auto w-16 h-16">
+        </div>
+    </section>
+    <section id="projects" class="container mx-auto py-20 px-4">
+        <h2 class="text-center text-4xl md:text-5xl font-semibold mb-12 text-gradient" data-aos="fade-up">Projects</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+            <div class="project-item p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
+                data-aos="zoom-in">
+                <div class="relative overflow-hidden rounded-lg mb-4">
+                    <img src="media/job-portal.webp" alt="Job Portal Project"
+                        class="w-full h-48 object-cover transition-transform duration-300 transform scale-100 hover:scale-110">
+                </div>
+                <h3 class="text-xl font-semibold mb-4 text-center">Job Portal</h3>
+                <div class="flex justify-center">
+                    <a href="https://github.com/yourusername/job-portal" target="_blank"
+                        class="text-blue-400 hover:underline">View on GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-item p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
+                data-aos="zoom-in" data-aos-delay="100">
+                <div class="relative overflow-hidden rounded-lg mb-4">
+                    <img src="media/netflix.webp" alt="Netflix Clone Project"
+                        class="w-full h-48 object-cover transition-transform duration-300 transform scale-100 hover:scale-110">
+                </div>
+                <h3 class="text-xl font-semibold mb-4 text-center">Netflix Clone</h3>
+                <div class="flex justify-center">
+                    <a href="https://github.com/Sivakumar296/Netflix-clone" target="_blank"
+                        class="text-blue-400 hover:underline">View on GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-item p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
+                data-aos="zoom-in" data-aos-delay="200">
+                <div class="relative overflow-hidden rounded-lg mb-4">
+                    <img src="media/api.webp" alt="Product Management API Project"
+                        class="w-full h-48 object-cover transition-transform duration-300 transform scale-100 hover:scale-110">
+                </div>
+                <h3 class="text-xl font-semibold mb-4 text-center">Product Management - API</h3>
+                <div class="flex justify-center">
+                    <a href="https://github.com/Sivakumar296/Python-RESTAPI" target="_blank"
+                        class="text-blue-400 hover:underline">View on GitHub</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+    <footer class="text-center py-8 bg-gray-900">
+        <p>&copy; 2025 Sivakumar. All rights reserved.</p>
+        <p>Email: <a href="mailto:sivakumarmailid296@gmail.com" class="text-blue-400">sivakumarmailid296@gmail.com</a>
+        </p>
+        <p>Phone: +91 9025009429</p>
+        <div class="flex justify-center gap-6 mt-4">
+            <a href="https://github.com/Sivakumar296" target="_blank" class="text-gray-400 hover:text-white"><i
+                    class="devicon-github-original"></i></a>
+            <a href="https://www.linkedin.com/in/sivakumar-s-4473082a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                target="_blank" class="text-gray-400 hover:text-white"><i class="devicon-linkedin-plain"></i></a>
+            <a href="https://twitter.com/" target="_blank" class="text-gray-400 hover:text-white"><i
+                    class="devicon-twitter-original"></i></a>
+        </div>
+    </footer>
+
+
+    <script>
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ canvas: document.querySelector('#bgCanvas') });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        camera.position.z = 5;
+
+        const geometry = new THREE.TorusKnotGeometry(10, 3, 100, 16);
+        const material = new THREE.MeshStandardMaterial({ color: 0x00ffcc, wireframe: true });
+        const torusKnot = new THREE.Mesh(geometry, material);
+        scene.add(torusKnot);
+
+        const light = new THREE.PointLight(0xffffff);
+        light.position.set(10, 10, 10);
+        scene.add(light);
+
+        function animate() {
+            requestAnimationFrame(animate);
+            torusKnot.rotation.x += 0.005;
+            torusKnot.rotation.y += 0.005;
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        window.addEventListener('resize', () => {
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+        });
+
+        ScrollReveal().reveal('section', { duration: 1000, origin: 'bottom', distance: '50px', easing: 'ease-in-out', interval: 200 });
+    </script>
+</body>
+
+</html>
