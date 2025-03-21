@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="icon" href="media/b2e371be-0696-4095-b580-eec6bd436c98.webp">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZLW176N7PD"></script>
     <script>
@@ -80,88 +83,187 @@
             filter: none;
             transform: scale(1.05);
         }
+        .skills-box img{
+            background-color:white;
+            padding: 5px;
+            border-radius: 8px;
+        }
+        .add-on{
+            display: flex;
+        }
+        .add-on div{
+            height: 50px;
+            width: 50px;
+            border-radius: 8px;
+            margin: 5px;
+            background-color: #fff;
+            padding: 10px;
+        }
+        .add-on a{
+            background-color: #fff;
+            border-radius: 8px;
+            color: black;
+        }
     </style>
 </head>
 
 <body>
+    
+
+
+    <!-- Font Awesome for Icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+
+    <!-- Script for Mobile Menu Toggle -->
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+    </script>
     <canvas id="bgCanvas"></canvas>
 
-    <section class="min-h-screen flex flex-col justify-center items-center text-center px-4">
-        <h1 class="text-4xl md:text-6xl font-bold">Sivakumar's Portfolio</h1>
+    <section class="flex flex-col justify-center text-center items-center min-h-screen px-4">
+        <h1 class="text-4xl font-bold md:text-6xl">Sivakumar's Portfolio</h1>
         <p class="text-lg md:text-xl mt-4">Creative Web Developer & Designer</p>
         <a href="#projects"
-            class="mt-8 bg-green-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300">View
+            class="bg-green-500 rounded-full text-white duration-300 font-bold hover:bg-blue-700 mt-8 px-6 py-3 transition">View
             Projects</a>
     </section>
 
-    <section id="about" class="container mx-auto py-20 px-4">
-        <h2 class="text-center text-4xl md:text-5xl font-semibold mb-12 text-gradient" data-aos="fade-up">About Me</h2>
-        <div class="flex flex-col md:flex-row items-center gap-10">
-            <div class="md:w-1/2">
-                <p class="text-lg mb-8 leading-relaxed">
-                    Hello! I'm Sivakumar, a dedicated web developer with a passion for transforming creative ideas into
-                    functional and engaging web experiences. Recently graduated, I'm now fully committed to building a
-                    successful career in web development. My journey has been a continuous adventure of learning,
-                    growth, and overcoming exciting challenges. I thrive on creating user-centric and visually appealing
-                    websites.
-                </p>
-                <p class="text-lg font-semibold mb-4">
-                    Moments that shaped my path:
-                </p>
+    <!-- Add FAFA Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Sivakumar</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FontAwesome (FAFA) Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- About Section -->
+    <section id="about" class="container mx-auto px-6 py-20">
+        <h2 class="text-4xl text-center text-white font-semibold mb-12 md:text-5xl" data-aos="fade-up">
+            About Me
+        </h2>
+        
+        <div class="flex flex-col gap-10 items-center md:flex-row">
+            <!-- Left Image Section -->
+            <div class="flex justify-center md:w-1/3 relative">
+                <!-- Outer Paint Effect -->
+                <div class="bg-contain bg-no-repeat h-64 w-60 absolute lg:h-96 lg:w-80 md:h-80 md:w-72"
+                     style="background-image: url('media/paint-brush-stroke.png');"></div>
+            
+                <!-- Profile Image with Responsive Height -->
+                <img src="media/profile-img.jpeg" alt="Profile Image" 
+                class=" border-gray-800 h-64 rounded-xl shadow-lg w-48 
+                       duration-300 hover:scale-105 lg:h-96 lg:w-64 md:h-80 md:w-56 
+                       object-cover relative transition-transform 
+                       filter grayscale hover:filter-none">
+            
             </div>
-            <div class="md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div
-                    class="about-image overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
-                    <img src="media/pexels-emma-bauso-1183828-2253879.jpg" alt="Memory 1"
-                        class="about-image-container w-full h-48 object-cover transition-transform duration-300 transform scale-100 hover:scale-105">
-                </div>
-                <div
-                    class="about-image-container overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 about-image-container">
-                    <img src="media/pexels-matheusferrero-1974927.jpg" alt="Memory 2"
-                        class="about-image w-full h-48 object-cover transition-transform duration-300 transform scale-100 hover:scale-105">
-                </div>
-                <div
-                    class="about-image-container overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 sm:col-span-2">
-                    <img src="media/pexels-liliana-drew-8506422.jpg" alt="Memory 3"
-                        class="about-image w-full h-64 object-cover transition-transform duration-300 transform scale-100 hover:scale-105">
+            
+            
+            
+
+            <!-- Right Text & Info Section -->
+            <div class="md:w-2/3">
+                <div class="flex flex-col gap-6">
+                    <!-- Experience, Education & Projects Section -->
+                    <div class="grid grid-cols-3 gap-4">
+                        <!-- Experience -->
+                        <div class="bg-gray-800 border border-gray-700 p-4 rounded-lg shadow-lg text-center hover:scale-105 transform transition-transform">
+                            <div class="text-3xl text-green-400 mb-2">
+                                <i class="fa-fw fa-medal fa-solid"></i> <!-- FAFA Medal Icon -->
+                            </div>
+                            <h3 class="text-sm text-white font-semibold">Experience</h3>
+                            <p class="text-gray-400 text-xs mt-1">6 months (web development)</p>
+                        </div>
+
+                        <!-- Education -->
+                        <div class="bg-gray-800 border border-gray-700 p-4 rounded-lg shadow-lg text-center hover:scale-105 transform transition-transform">
+                            <div class="text-3xl text-green-400 mb-2">
+                                <i class="fa-fw fa-solid fa-user-graduate"></i> <!-- FAFA Graduation Cap -->
+                            </div>
+                            <h3 class="text-sm text-white font-semibold">Education</h3>
+                            <p class="text-gray-400 text-xs mt-1">BBA(CA) <br>2020 - 2023</p>
+                        </div>
+
+                        <!-- Completed Projects -->
+                        <div class="bg-gray-800 border border-gray-700 p-4 rounded-lg shadow-lg text-center hover:scale-105 transform transition-transform">
+                            <a href="#projects"><div class="text-3xl text-green-400 mb-2">
+                                <i class="fa-folder-open fa-fw fa-solid"></i> <!-- FAFA Folder Icon -->
+                            </div>
+                            <h3 class="text-sm text-white font-semibold">Completed</h3>
+                            <a href="#projects" class="text-gray-400 text-xs mt-1">3 Projects</a></a>
+                        </div>
+                    </div>
+
+                    <!-- Description -->
+                    <p class="text-gray-300 text-md leading-relaxed">
+                        An aspiring <span class="text-white font-semibold">web developer</span> driven by a deep passion for programming and a boundless enthusiasm for creating impactful solutions. From the moment I embarked on my journey into the world of programming, I was captivated by its potential to bring ideas to life and solve real-world problems.
+                    </p>
+
+                    <!-- Contact & Resume Button -->
+                    <div class="flex flex-wrap gap-4 mt-4">
+                        <a href="https://drive.google.com/file/d/1kekpR2nOfadcZvRGCmdylTXGfu7a-vry/view?usp=drivesdk" class="bg-blue-600 rounded-lg shadow-lg text-sm text-white font-semibold hover:bg-blue-700 px-5 py-2 transition">
+                            <i class="fa-download fa-solid mr-2"></i> Download Resume
+                        </a>
+                        <a href="mailto:sivakumarmailid296@gmail.com" class="bg-purple-600 rounded-lg shadow-lg text-sm text-white font-semibold hover:bg-purple-700 px-5 py-2 transition">
+                            <i class="fa-envelope fa-solid mr-2"></i> Contact Me
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+</body>
+</html>
 
 
 
     <!-- Roadmap Section -->
-    <section id="roadmap" class="container mx-auto py-20 px-4">
-        <h2 class="text-center text-4xl md:text-5xl font-semibold mb-12 text-gradient" data-aos="fade-up">Roadmap</h2>
+    <section id="roadmap" class="container mx-auto px-4 py-20">
+        <h2 class="text-4xl text-center text-gradient font-semibold mb-12 md:text-5xl" data-aos="fade-up">Roadmap</h2>
 
         <div class="relative">
             <!-- Road line -->
-            <div class="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gray-700 h-full z-0"></div>
+            <div class="bg-gray-700 h-full w-1 -translate-x-1/2 absolute left-1/2 transform z-0"></div>
 
             <!-- Phase 1 -->
-            <div class="mb-16 flex justify-center relative">
+            <div class="flex justify-center mb-16 relative">
                 <div
-                    class="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-3xl shadow-2xl hover:shadow-xl transition-shadow duration-300 w-2/3 md:w-1/2 text-center relative z-10">
+                    class="bg-gradient-to-br p-8 rounded-3xl shadow-2xl text-center w-2/3 duration-300 from-gray-800 hover:shadow-xl md:w-1/2 relative to-gray-900 transition-shadow z-10">
                     <div
-                        class="absolute -left-6 md:-left-8 top-1/2 transform -translate-y-1/2 bg-blue-600 rounded-full w-12 h-12 flex items-center justify-center">
-                        <i class="fas fa-lightbulb text-white text-xl"></i>
+                        class="flex bg-blue-600 h-12 justify-center rounded-full w-12 -left-6 -translate-y-1/2 absolute items-center md:-left-8 top-1/2 transform">
+                        <i class="text-white text-xl fa-lightbulb fas"></i>
                     </div>
-                    <h3 class="text-2xl font-semibold mb-4 text-blue-300">Ignition Phase</h3>
+                    <h3 class="text-2xl text-blue-300 font-semibold mb-4">Ignition Phase</h3>
                     <p class="text-gray-400 leading-relaxed">Learn Basic about Web Development</p>
                 </div>
             </div>
 
             <!-- Phase 2 -->
-            <div class="mb-16 flex justify-center relative">
+            <div class="flex justify-center mb-16 relative">
                 <div
-                    class="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-3xl shadow-2xl hover:shadow-xl transition-shadow duration-300 w-2/3 md:w-1/2 text-center relative z-10">
+                    class="bg-gradient-to-br p-8 rounded-3xl shadow-2xl text-center w-2/3 duration-300 from-gray-800 hover:shadow-xl md:w-1/2 relative to-gray-900 transition-shadow z-10">
                     <div
-                        class="absolute -right-6 md:-right-8 top-1/2 transform -translate-y-1/2 bg-green-600 rounded-full w-12 h-12 flex items-center justify-center">
-                        <i class="fas fa-rocket text-white text-xl"></i>
+                        class="flex bg-green-600 h-12 justify-center rounded-full w-12 -right-6 -translate-y-1/2 absolute items-center md:-right-8 top-1/2 transform">
+                        <i class="text-white text-xl fa-rocket fas"></i>
                     </div>
-                    <h3 class="text-2xl font-semibold mb-4 text-green-300">Launch Phase</h3>
+                    <h3 class="text-2xl text-green-300 font-semibold mb-4">Launch Phase</h3>
                     <p class="text-gray-400 leading-relaxed">Dive deep into core concepts: HTML5, CSS3, JavaScript, and
                         React fundamentals.</p>
                 </div>
@@ -170,12 +272,12 @@
             <!-- Phase 3 -->
             <div class="flex justify-center relative">
                 <div
-                    class="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-3xl shadow-2xl hover:shadow-xl transition-shadow duration-300 w-2/3 md:w-1/2 text-center relative z-10">
+                    class="bg-gradient-to-br p-8 rounded-3xl shadow-2xl text-center w-2/3 duration-300 from-gray-800 hover:shadow-xl md:w-1/2 relative to-gray-900 transition-shadow z-10">
                     <div
-                        class="absolute -left-6 md:-left-8 top-1/2 transform -translate-y-1/2 bg-purple-600 rounded-full w-12 h-12 flex items-center justify-center">
-                        <i class="fas fa-meteor text-white text-xl"></i>
+                        class="flex bg-purple-600 h-12 justify-center rounded-full w-12 -left-6 -translate-y-1/2 absolute items-center md:-left-8 top-1/2 transform">
+                        <i class="text-white text-xl fa-meteor fas"></i>
                     </div>
-                    <h3 class="text-2xl font-semibold mb-4 text-purple-300">Ascension Phase</h3>
+                    <h3 class="text-2xl text-purple-300 font-semibold mb-4">Ascension Phase</h3>
                     <p class="text-gray-400 leading-relaxed">Developing a responsive and dynamic web application that
                         ensures seamless functionality across devices, providing an interactive and user-friendly
                         experience.</p>
@@ -190,86 +292,154 @@
 
 
 
-    <section id="skills" class="container mx-auto py-20 px-4 bg-gr-800 rounded-lg">
-        <h2 class="text-center text-4xl md:text-5xl font-semibold mb-12">Skills</h2>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 text-center">
-            <img src="media/html-5.png" alt="HTML" class="mx-auto w-16 h-16">
-            <img src="media/css-3.png" alt="CSS" class="mx-auto w-16 h-16">
-            <img src="media/java-script.png" alt="JavaScript" class="mx-auto w-16 h-16">
-            <img src="media/python.png" alt="Python" class="mx-auto w-16 h-16">
-            <img src="media/icons8-bootstrap-96.png" alt="Bootstrap" class="mx-auto w-16 h-16">
-            <img src="media/download.png" alt="React" class="mx-auto w-16 h-16">
-            <img src="media/atom.png" alt="Atom" class="mx-auto w-16 h-16">
-            <img src="media/icons8-api-32.png" alt="API" class="mx-auto w-16 h-16">
-            <img src="media/icons8-django-48.png" alt="Django" class="mx-auto w-16 h-16">
-            <img src="media/mysql.png" alt="MySQL" class="mx-auto w-16 h-16">
-            <img src="media/icons8-mongo-db-48.png" alt="MongoDB" class="mx-auto w-16 h-16">
+    <section id="skills" class="container bg-gr-800 rounded-lg mx-auto px-4 py-20">
+        <h2 class="text-4xl text-center font-semibold mb-12 md:text-5xl">Skills</h2>
+        <div class="grid grid-cols-2 text-center gap-8 lg:grid-cols-5 md:grid-cols-4 skills-box sm:grid-cols-3">
+            <img src="media/html-5.png" alt="HTML" class="h-16 w-16 mx-auto">
+            <img src="media/css-3.png" alt="CSS" class="h-16 w-16 mx-auto">
+            <img src="media/java-script.png" alt="JavaScript" class="h-16 w-16 mx-auto">
+            <img src="media/python.png" alt="Python" class="h-16 w-16 mx-auto">
+            <img src="media/icons8-bootstrap-96.png" alt="Bootstrap" class="h-16 w-16 mx-auto">
+            <img src="media/download.png" alt="React" class="h-16 w-16 mx-auto">
+            <img src="media/atom.png" alt="Atom" class="h-16 w-16 mx-auto">
+            <img src="media/icons8-api-32.png" alt="API" class="h-16 w-16 mx-auto">
+            <img src="media/icons8-django-48.png" alt="Django" class="h-16 w-16 mx-auto">
+            <img src="media/mysql.png" alt="MySQL" class="h-16 w-16 mx-auto">
+            <img src="media/icons8-mongo-db-48.png" alt="MongoDB" class="h-16 w-16 mx-auto">
         </div>
     </section>
-    <section id="projects" class="container mx-auto py-20 px-4">
-        <h2 class="text-center text-4xl md:text-5xl font-semibold mb-12 text-gradient" data-aos="fade-up">Projects</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+    <!-- Projects Section -->
+<section id="projects" class="container mx-auto px-4 py-20">
+    <h2 class="text-4xl text-center text-white font-semibold mb-12 md:text-5xl" data-aos="fade-up">Projects</h2>
 
-            <div class="project-item p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
-                data-aos="zoom-in">
-                <div class="relative overflow-hidden rounded-lg mb-4">
-                    <img src="media/job-portal.webp" alt="Job Portal Project"
-                        class="w-full h-48 object-cover transition-transform duration-300 transform scale-100 hover:scale-110">
-                </div>
-                <h3 class="text-xl font-semibold mb-4 text-center">Job Portal</h3>
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-3 sm:grid-cols-2">
+        <!-- Project Item -->
+        <div class="flex flex-col bg-gray-800 rounded-lg shadow-lg duration-300 hover:scale-105 hover:shadow-2xl overflow-hidden project-item relative transform transition-transform"
+            data-aos="zoom-in">
+            <div class="overflow-hidden relative">
+                <img src="media/job-portal.webp" alt="Job Portal Project"
+                    class="h-52 w-full duration-300 hover:scale-110 object-cover transform transition-transform">
+            </div>
+            <div class="flex flex-1 flex-col justify-between p-6">
+                <h3 class="text-center text-xl font-semibold mb-4">Job Portal</h3>
                 <div class="flex justify-center">
                     <a href="https://github.com/yourusername/job-portal" target="_blank"
-                        class="text-blue-400 hover:underline">View on GitHub</a>
+                        class="bg-blue-500 rounded-md shadow-md text-white font-semibold hover:bg-blue-600 px-4 py-2 transition">
+                        View on GitHub
+                    </a>
                 </div>
             </div>
+        </div>
 
-            <div class="project-item p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
-                data-aos="zoom-in" data-aos-delay="100">
-                <div class="relative overflow-hidden rounded-lg mb-4">
-                    <img src="media/netflix.webp" alt="Netflix Clone Project"
-                        class="w-full h-48 object-cover transition-transform duration-300 transform scale-100 hover:scale-110">
-                </div>
-                <h3 class="text-xl font-semibold mb-4 text-center">Netflix Clone</h3>
+        <!-- Project Item -->
+        <div class="flex flex-col bg-gray-800 rounded-lg shadow-lg duration-300 hover:scale-105 hover:shadow-2xl overflow-hidden project-item relative transform transition-transform"
+            data-aos="zoom-in" data-aos-delay="100">
+            <div class="overflow-hidden relative">
+                <img src="media/netflix.webp" alt="Netflix Clone Project"
+                    class="h-52 w-full duration-300 hover:scale-110 object-cover transform transition-transform">
+            </div>
+            <div class="flex flex-1 flex-col justify-between p-6">
+                <h3 class="text-center text-xl font-semibold mb-4">Netflix Clone</h3>
                 <div class="flex justify-center">
                     <a href="https://github.com/Sivakumar296/Netflix-clone" target="_blank"
-                        class="text-blue-400 hover:underline">View on GitHub</a>
+                        class="bg-blue-500 rounded-md shadow-md text-white font-semibold hover:bg-blue-600 px-4 py-2 transition">
+                        View on GitHub
+                    </a>
                 </div>
             </div>
+        </div>
 
-            <div class="project-item p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
-                data-aos="zoom-in" data-aos-delay="200">
-                <div class="relative overflow-hidden rounded-lg mb-4">
-                    <img src="media/api.webp" alt="Product Management API Project"
-                        class="w-full h-48 object-cover transition-transform duration-300 transform scale-100 hover:scale-110">
-                </div>
-                <h3 class="text-xl font-semibold mb-4 text-center">Product Management - API</h3>
+        <!-- Project Item -->
+        <div class="flex flex-col bg-gray-800 rounded-lg shadow-lg duration-300 hover:scale-105 hover:shadow-2xl overflow-hidden project-item relative transform transition-transform"
+            data-aos="zoom-in" data-aos-delay="200">
+            <div class="overflow-hidden relative">
+                <img src="media/api.webp" alt="Product Management API Project"
+                    class="h-52 w-full duration-300 hover:scale-110 object-cover transform transition-transform">
+            </div>
+            <div class="flex flex-1 flex-col justify-between p-6">
+                <h3 class="text-center text-xl font-semibold mb-4">Product Management - API</h3>
                 <div class="flex justify-center">
                     <a href="https://github.com/Sivakumar296/Python-RESTAPI" target="_blank"
-                        class="text-blue-400 hover:underline">View on GitHub</a>
+                        class="bg-blue-500 rounded-md shadow-md text-white font-semibold hover:bg-blue-600 px-4 py-2 transition">
+                        View on GitHub
+                    </a>
                 </div>
             </div>
-
         </div>
-    </section>
+    </div>
+</section>
 
 
+    <!-- Certifications Section -->
+<section id="certifications" class="container mx-auto px-6 py-20">
+    <h2 class="bg-clip-text bg-white text-4xl text-center text-transparent font-semibold from-blue-500 mb-12 md:text-5xl to-purple-600" data-aos="fade-up">
+        Certifications
+    </h2>
 
-
-
-    <footer class="text-center py-8 bg-gray-900">
-        <p>&copy; 2025 Sivakumar. All rights reserved.</p>
-        <p>Email: <a href="mailto:sivakumarmailid296@gmail.com" class="text-blue-400">sivakumarmailid296@gmail.com</a>
-        </p>
-        <p>Phone: +91 9025009429</p>
-        <div class="flex justify-center gap-6 mt-4">
-            <a href="https://github.com/Sivakumar296" target="_blank" class="text-gray-400 hover:text-white"><i
-                    class="devicon-github-original"></i></a>
-            <a href="https://www.linkedin.com/in/sivakumar-s-4473082a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                target="_blank" class="text-gray-400 hover:text-white"><i class="devicon-linkedin-plain"></i></a>
-            <a href="https://twitter.com/" target="_blank" class="text-gray-400 hover:text-white"><i
-                    class="devicon-twitter-original"></i></a>
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-3 md:grid-cols-2">
+        <!-- Certification Card -->
+        <div class="bg-gray-800 border border-gray-700 p-6 rounded-xl shadow-lg text-center hover:scale-105 transition">
+            <div class="text-4xl text-blue-400 mb-4">
+                <i class="fa-certificate fa-solid"></i> <!-- FAFA Certificate Icon -->
+            </div>
+            <h3 class="text-lg text-white font-semibold">Python-FullStack Web Development</h3>
+            <p class="text-gray-400 text-sm mt-2">Issued by IIE  • 2024 </p>
+            <a href="certificate1.pdf" class="bg-blue-600 rounded-lg shadow-md text-sm text-white font-semibold hover:bg-blue-700 inline-block mt-4 px-4 py-2 transition">
+                View Certificate
+            </a>
         </div>
-    </footer>
+
+        <!-- Certification Card -->
+        <div class="bg-gray-800 border border-gray-700 p-6 rounded-xl shadow-lg text-center hover:scale-105 transition">
+            <div class="text-4xl text-blue-400 mb-4">
+                <i class="fa-certificate fa-solid"></i>
+            </div>
+            <h3 class="text-lg text-white font-semibold">Web Desiging</h3>
+            <p class="text-gray-400 text-sm mt-2">Issued by Greate Learning • 2023</p>
+            <a href="certificate2.pdf" class="bg-blue-600 rounded-lg shadow-md text-sm text-white font-semibold hover:bg-blue-700 inline-block mt-4 px-4 py-2 transition">
+                View Certificate
+            </a>
+        </div>
+
+        <!-- Certification Card -->
+        <div class="bg-gray-800 border border-gray-700 p-6 rounded-xl shadow-lg text-center hover:scale-105 transition">
+            <div class="text-4xl text-blue-400 mb-4">
+                <i class="fa-certificate fa-solid"></i>
+            </div>
+            <h3 class="text-lg text-white font-semibold">React js - Basic</h3>
+            <p class="text-gray-400 text-sm mt-2">Issued by FreeCodeCamp • 2022</p>
+            <a href="certificate3.pdf" class="bg-blue-600 rounded-lg shadow-md text-sm text-white font-semibold hover:bg-blue-700 inline-block mt-4 px-4 py-2 transition">
+                View Certificate
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<footer class="bg-gray-900 text-center py-8">
+    <p>&copy; 2025 Sivakumar. All rights reserved.</p>
+    <p>Email: <a href="mailto:sivakumarmailid296@gmail.com" class="text-blue-400">sivakumarmailid296@gmail.com</a></p>
+    <p>Phone: +91 9025009429</p>
+    <div class="flex justify-center gap-6 mt-4">
+        <a href="https://github.com/Sivakumar296" target="_blank" class="text-gray-400 hover:text-white">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/sivakumar-s-4473082a8" target="_blank" class="text-gray-400 hover:text-white">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://twitter.com/" target="_blank" class="text-gray-400 hover:text-white">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.snapchat.com/add/YOUR_SNAPCHAT_ID" target="_blank" class="text-gray-400 hover:text-white">
+            <i class="fab fa-snapchat-ghost"></i>
+        </a>
+    </div>
+</footer>
+
 
 
     <script>
